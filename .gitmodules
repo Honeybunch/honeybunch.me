@@ -1,0 +1,3 @@
+[submodule "themes/dracula-zen"]
+	path = themes/dracula-zen
+	url = https://github.com/ztroop/dracula-zen.git
