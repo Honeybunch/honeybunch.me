@@ -18,6 +18,12 @@ jobs:
     steps:
     - uses: actions/checkout@v1
 
+    - name: Install zola
+      run: sudo snap install --edge zola
+
+    - name: Build
+      run: zola build
+
     - name: Deploy to neocities
       uses: bcomnes/deploy-to-neocities@v1
       with:
