@@ -3,6 +3,8 @@ base_url = "https://honeybunch.neocities.org"
 
 theme = "dracula-zen"
 
+title = "Honeybunch's Programming Zone"
+
 # Whether to automatically compile all Sass files in the sass directory
 compile_sass = false
 
