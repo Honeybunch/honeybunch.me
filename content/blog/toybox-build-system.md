@@ -1,6 +1,6 @@
 +++
 title = "The Toybox Build System"
-date = 2023-1-31
+date = 2023-01-31
 +++
 
 I've been working on a little game engine I've been calling [toybox](https://github.com/HoneybunchBuilder/toybox). It's been a fun exercise in building a small piece tech for crafting the kinds of games I want to build, the way I want to build them. It's not a perfect project by any stretch of the imagination but the CMake based build system that I have driving my work with it has reached a point where I'd like to show it off a bit.
