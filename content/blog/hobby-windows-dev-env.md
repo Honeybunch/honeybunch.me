@@ -121,7 +121,7 @@ After just a `scoop install git-lfs ninja cmake vulkan llvm w64devkit vcpkg` I a
 
 Due to a REALLY annoying quirk in the `ktx` package I depend on I have to have an install of bash that `ktx`'s cmake script is able to find. The easiest way to do this I've found is to manually install the Git for Windows distribution and select all the default options to install it to Program Files. Otherwise the default `C:\Windows\System32\bash.exe` will fail; even if you have a working WSL install the ktx build won't work. The alternative to this isn't much better. You can edit your PATH environment variable to put `%USERPROFILE%\scoop\shims` before `C:\Windows\System32\bash.exe` and set the env var `VCPKG_KEEP_ENV_VARS` to `PATH` to persist the variable to vcpkg's build environment. This isn't really any better if you ask me. 
 
-You can see more detail about my build system [on this other post](@/content/blog/toybox-build-system.md) but from here in the command line we can just do `cmake --preset x64-windows-ninja-llvm` to configure and `cmake --build --preset debug-x64-windows-ninja-llvm` to build. If you're following along the vcpkg dependency compilation step can be a bit slow but it's been pretty reliable across the various machines I test builds on.
+You can see more detail about my build system [on this other post](/blog/toybox-build-system.md) but from here in the command line we can just do `cmake --preset x64-windows-ninja-llvm` to configure and `cmake --build --preset debug-x64-windows-ninja-llvm` to build. If you're following along the vcpkg dependency compilation step can be a bit slow but it's been pretty reliable across the various machines I test builds on.
 
 ## And beyond
 
