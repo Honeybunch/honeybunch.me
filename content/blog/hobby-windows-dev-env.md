@@ -15,13 +15,13 @@ My hobby development these days is mostly in C with a dash of C++ and the occasi
 
 If you're on Windows 10 you have to go get it ([on github here](https://github.com/microsoft/terminal)) or if you're on Windows 11 you get it right out of the box. If you've been using Powershell or raw dogging cmd I think you should treat yourself better and give Windows Terminal a shot. Even if you use nothing else here just being able to have a single terminal that can open shells in cmd, powershell, wsl, etc. is a major time saver. Plus it has a nice amount of customization too so you can hone in on whatever look you're after. 
 
-![windows terminal in windows 11 with poorly drawn red hearts](mynewbestfriend.png)
+![windows terminal in windows 11 with poorly drawn red hearts](https://raw.githubusercontent.com/Honeybunch/honeybunch.me/main/content/blog/hobby-windows-dev-env/mynewbestfriend.png)
 
 ## Scoop up a package manager
 
 In the dark ages Windows used to not have a viable package manager for installing software from the command line. Nowadays there are a few choices. Winget is the offering from Microsoft and Chocolatey is the OG but I've fallen in love with scoop. You can find this wonderful friend over at https://scoop.sh/ and you can install it easily from any powershell prompt.
 
-![scoop installed](scooped.png)
+![scoop installed](https://raw.githubusercontent.com/Honeybunch/honeybunch.me/main/content/blog/hobby-windows-dev-env/scooped.png)
 
 ## Cmding a more powerful shell
 
@@ -66,7 +66,7 @@ Unfortunately that is not the end of our labor. We have to add a cmder profile t
 ```
 Now close your terminal because scoop was helpful and set some cmder related environment variables for us and we'll need those to be relevant to the Windows Terminal process in order to finally boot. You should be greeted with something like this:
 
-![cmder booted](booted.png)
+![cmder booted](https://raw.githubusercontent.com/Honeybunch/honeybunch.me/main/content/blog/hobby-windows-dev-env/booted.png)
 
 You should take note of the clink message there. I usually just run a `clink update` whenever it pesters me since it's a fast process. Maybe in the future there might be a good way to manage that with scoop too.
 
@@ -74,7 +74,7 @@ If you installed `cmder-full` instead you'd be fine to use the cmder bundled bus
 
 Now we have an environment that has all the windows ports of unix tools found in the git-for-windows distribution but with some extra helpful macros. A favorite of mine is that `e.` will open your current directory in explorer. Other than that you're free to `ls`, `grep`, `awk` and `cat` to your heart's content in the same window that you can also run that `.bat` script your coworker wrote or quickly invoke a simple `powershell` command to run that `.ps1`. 
 
-![some unix tools](power.png)
+![some unix tools](https://raw.githubusercontent.com/Honeybunch/honeybunch.me/main/content/blog/hobby-windows-dev-env/power.png)
 
 ### A couple extra notes
 
@@ -121,7 +121,7 @@ After just a `scoop install git-lfs ninja cmake vulkan llvm w64devkit vcpkg` I a
 
 Due to a REALLY annoying quirk in the `ktx` package I depend on I have to have an install of bash that `ktx`'s cmake script is able to find. The easiest way to do this I've found is to manually install the Git for Windows distribution and select all the default options to install it to Program Files. Otherwise the default `C:\Windows\System32\bash.exe` will fail; even if you have a working WSL install the ktx build won't work. The alternative to this isn't much better. You can edit your PATH environment variable to put `%USERPROFILE%\scoop\shims` before `C:\Windows\System32\bash.exe` and set the env var `VCPKG_KEEP_ENV_VARS` to `PATH` to persist the variable to vcpkg's build environment. This isn't really any better if you ask me. 
 
-You can see more detail about my build system [on this other post](/blog/toybox-build-system.md) but from here in the command line we can just do `cmake --preset x64-windows-ninja-llvm` to configure and `cmake --build --preset debug-x64-windows-ninja-llvm` to build. If you're following along the vcpkg dependency compilation step can be a bit slow but it's been pretty reliable across the various machines I test builds on.
+You can see more detail about my build system [on this other post](/blog/toybox-build-system) but from here in the command line we can just do `cmake --preset x64-windows-ninja-llvm` to configure and `cmake --build --preset debug-x64-windows-ninja-llvm` to build. If you're following along the vcpkg dependency compilation step can be a bit slow but it's been pretty reliable across the various machines I test builds on.
 
 ## And beyond
 
