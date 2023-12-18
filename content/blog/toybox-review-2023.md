@@ -1,4 +1,8 @@
-# Toybox Development 2023 Recap
++++
+title = "Toybox Development 2023 Recap"
+date = 2023-12-18
++++
+
 As 2023 comes to a close I've decided that I need to take some time to reflect on my progress developing the Toybox game engine. I always have a hard time keeping it in my brain that I've actually every gotten anything done. But 2023 was definitely a year in which I got many things done so join me as we take a peek at what I did on my personal game engine Toybox.
 
 ## January
