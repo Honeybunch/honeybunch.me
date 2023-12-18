@@ -6,7 +6,7 @@ date = 2023-12-18
 As 2023 comes to a close I've decided that I need to take some time to reflect on my progress developing the Toybox game engine. I always have a hard time keeping it in my brain that I've actually every gotten anything done. But 2023 was definitely a year in which I got many things done so join me as we take a peek at what I did on my personal game engine Toybox.
 
 ## January
-We saw some big pivots to Toybox that were ultimately stepping stones on the path to larger improvements for the engine. I was still struggling with trying to get shadow maps to behave correctly and as a distracting I spent a bit of time cleaning up CI and the build system. We began dropping some of the more complex aspects of mobile support (a trend that would continue) and began shoring up things like asset cooking for sample projects. I also ditched the concept of EulerAngles from the engine entirely as they were more trouble than they were worth; Quaternions all the way baybeee!
+I was still struggling with trying to get shadow maps to behave correctly and as a distraction I spent a bit of time cleaning up CI and the build system. I began dropping some of the more complex aspects of mobile support (a trend that would continue) and began shoring up things like asset cooking for sample projects. I also ditched the concept of EulerAngles from the engine entirely as they were more trouble than they were worth; Quaternions all the way baybeee!
 
 ## Febuary
 This month began with a bunch of work to get the ocean system playing nicely with the `boat2` scene which has been my testbed for boat related features that I want for my sailing game concept. Other than that it was a fairly slow month mostly filled with little fixes and work to make the code base more consistent.
@@ -17,7 +17,7 @@ This was a month where I started off strong by committing to the Vulkan 1.3 dyna
 This effectively makes Android and MoltenVk (iOS, macOS) unsupported by the current renderer. I'm not super thrilled about this so I've committed to keep CI building for iOS, macOS and Android in the hopes that some future work will enable Vulkan 1.3 on these platforms. The roadmap for Toybox is still very long at this point so I think looking to the future is appropriate.
 
 ## April 
-March also saw a lot of other smaller fixes and work in a lot of misc areas that really burn me out so April was particularly slow. Not much in particular to report.
+March also saw a lot of other smaller fixes and work in a lot of misc areas that really burnt me out so April was particularly slow. Not much in particular to report.
 
 ## May
 One feature I really wanted to implement was Screen Space Ambient Occlusion (SSAO) and May was the month where I took a stab at that. This involved a bunch of scaffolding work to support Compute work in the rendering API so that the engine would be able to blur the SSAO target with a compute shader. It was also at this point that I gave up on a Reverse Depth Buffer for now; it made shadows in particular a bit hard to wrap my head around when debugging. It's just controlled by a define so I can (and probably will) revive it.
