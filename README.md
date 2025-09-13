@@ -1,4 +1,4 @@
-# [honeybunch.ch] (https://honeybun.ch)
+# [honeybun.ch] (https://honeybun.ch)
 My personal website hosted on neocities.org
 
 Currently: https://honeybun.ch
