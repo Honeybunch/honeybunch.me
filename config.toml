@@ -11,7 +11,8 @@ compile_sass = false
 # Whether to build a search index to be used later on by a JavaScript library
 build_search_index = false
 
-# When set to "true", a feed is automatically generated.
+# When set to "true", a feed is automatically 
+# generated.
 generate_feed = false
 
 # The filename to use for the feed. Used as the template filename, too.
